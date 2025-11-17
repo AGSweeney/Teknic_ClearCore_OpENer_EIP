@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATSAME53N19A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>EthernetIpAdapter</AssemblyName>
+    <Name>EthernetIpAdapter</Name>
+    <RootNamespace>EthernetIpAdapter</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+  </dependencies>
+</framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+      <Value>CLEARCORE</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
+      <Value>../../../../libClearCore/inc</Value>
+      <Value>../../../../LwIP/LwIP/src/include</Value>
+      <Value>../../../../LwIP/LwIP/port/include</Value>
+      <Value>../opener/src</Value>
+      <Value>../opener/src/cip</Value>
+      <Value>../opener/src/enet_encap</Value>
+      <Value>../opener/src/utils</Value>
+      <Value>../opener/src/ports</Value>
+      <Value>../opener/src/ports/ClearCore</Value>
+      <Value>../opener/src/ports/ClearCore/sample_application</Value>
+      <Value>../opener/src/ports/nvdata</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+      <Value>CLEARCORE</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
+      <Value>../../../../libClearCore/inc</Value>
+      <Value>../../../../LwIP/LwIP/src/include</Value>
+      <Value>../../../../LwIP/LwIP/port/include</Value>
+      <Value>../opener/src</Value>
+      <Value>../opener/src/cip</Value>
+      <Value>../opener/src/enet_encap</Value>
+      <Value>../opener/src/utils</Value>
+      <Value>../opener/src/ports</Value>
+      <Value>../opener/src/ports/ClearCore</Value>
+      <Value>../opener/src/ports/ClearCore/sample_application</Value>
+      <Value>../opener/src/ports/nvdata</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsame53n19a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
+    </ListValues>
+  </armgcccpp.assembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+</ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>CLEARCORE</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
+      <Value>../../../../libClearCore/inc</Value>
+      <Value>../../../../LwIP/LwIP/src/include</Value>
+      <Value>../../../../LwIP/LwIP/port/include</Value>
+      <Value>../opener/src</Value>
+      <Value>../opener/src/cip</Value>
+      <Value>../opener/src/enet_encap</Value>
+      <Value>../opener/src/utils</Value>
+      <Value>../opener/src/ports</Value>
+      <Value>../opener/src/ports/ClearCore</Value>
+      <Value>../opener/src/ports/ClearCore/sample_application</Value>
+      <Value>../opener/src/ports/nvdata</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize debugging experience (-Og)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>CLEARCORE</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
+      <Value>../../../../libClearCore/inc</Value>
+      <Value>../../../../LwIP/LwIP/src/include</Value>
+      <Value>../../../../LwIP/LwIP/port/include</Value>
+      <Value>../opener/src</Value>
+      <Value>../opener/src/cip</Value>
+      <Value>../opener/src/enet_encap</Value>
+      <Value>../opener/src/utils</Value>
+      <Value>../opener/src/ports</Value>
+      <Value>../opener/src/ports/ClearCore</Value>
+      <Value>../opener/src/ports/ClearCore/sample_application</Value>
+      <Value>../opener/src/ports/nvdata</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize debugging experience (-Og)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsame53n19a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
+    </ListValues>
+  </armgcccpp.assembler.general.IncludePaths>
+  <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+</ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Device_Startup\startup_same53.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\system_same53.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EthernetIpAdapter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\appcontype.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipassembly.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipclass3connection.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipcommon.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipconnectionmanager.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipconnectionobject.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipdlr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipelectronickey.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipepath.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipethernetlink.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipidentity.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipioconnection.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipmessagerouter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipqos.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipstring.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\cipstringi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\ciptcpipinterface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\cip\ciptypes.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\enet_encap\cpf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\enet_encap\encap.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\enet_encap\endianconv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\utils\doublylinkedlist.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\utils\enipmessage.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\utils\random.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\utils\xorshiftrandom.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\generic_networkhandler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\socket_timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\nvdata\conffile.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\nvdata\nvdata.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\nvdata\nvtcpip.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\nvdata\nvqos.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\ClearCore\opener.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\ClearCore\networkhandler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\ClearCore\networkconfig.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\ClearCore\opener_error.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\opener\src\ports\ClearCore\sample_application\sampleapplication.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Device_Startup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Device_Startup\same53n19a_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\same53n19a_sram.ld">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

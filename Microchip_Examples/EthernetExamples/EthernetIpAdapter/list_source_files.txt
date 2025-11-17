@@ -1,0 +1,62 @@
+# opENer Source Files to Add to Project
+# Use this list when adding files in Microchip Studio
+
+## Core opENer CIP Files (opener/src/cip/)
+cipassembly.c
+cipclass3connection.c
+cipcommon.c
+cipconnectionmanager.c
+cipconnectionobject.c
+cipdlr.c
+cipelectronickey.c
+cipepath.c
+cipethernetlink.c
+cipidentity.c
+cipioconnection.c
+cipmessagerouter.c
+cipqos.c
+cipstring.c
+cipstringi.c
+ciptcpipinterface.c
+ciptypes.c
+
+## Ethernet Encapsulation Files (opener/src/enet_encap/)
+cpf.c
+encap.c
+endianconv.c
+
+## Utility Files (opener/src/utils/)
+doublylinkedlist.c
+enipmessage.c
+random.c
+xorshiftrandom.c
+
+## Generic Network Handler (opener/src/ports/)
+generic_networkhandler.c
+socket_timer.c
+
+## NVData Files (opener/src/ports/nvdata/)
+conffile.c
+nvdata.c
+nvtcpip.c
+nvqos.c
+
+## ClearCore Port Files (opener/src/ports/ClearCore/)
+opener.c
+networkhandler.c
+networkconfig.c
+opener_error.c
+
+## Sample Application (opener/src/ports/ClearCore/sample_application/)
+sampleapplication.c
+
+## Device Startup (Device_Startup/)
+startup_same53.c
+
+## Linker Scripts (Device_Startup/)
+flash_with_bootloader.ld
+flash_without_bootloader.ld
+
+## Main Application
+EthernetIpAdapter.cpp
+
